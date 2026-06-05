@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NSE/BSE Terminal · Indian Stock Research</title>
+  <meta name="description" content="Live Indian stock prices, fundamentals, PE ratio, EPS, market cap for NSE and BSE listed companies." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.44.0/tabler-icons.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- TOP NAV -->
+  <header class="topbar">
+    <div class="logo">
+      <span class="logo-nse">NSE</span><span class="logo-sep">/</span><span class="logo-bse">BSE</span>
+      <span class="logo-tag">TERMINAL</span>
+    </div>
+
+    <div class="search-wrap">
+      <i class="ti ti-search search-icon" aria-hidden="true"></i>
+      <input
+        id="stockSearch"
+        class="search-input"
+        type="text"
+        placeholder="Search: Reliance, TCS, INFY, HDFC..."
+        autocomplete="off"
+        aria-label="Search for an Indian stock or index"
+      />
+      <kbd class="kbd-hint">↵</kbd>
+    </div>
+
+    <button class="search-btn" id="searchBtn" aria-label="Search">
+      <i class="ti ti-arrow-right"></i> Search
+    </button>
+
+    <div class="market-ticker" id="marketTicker">
+      <span class="ticker-item">NIFTY 50 <span class="up">▲ 0.42%</span></span>
+      <span class="ticker-item">SENSEX <span class="up">▲ 0.38%</span></span>
+      <span class="ticker-item">BANK NIFTY <span class="down">▼ 0.11%</span></span>
+    </div>
+  </header>
+
+  <!-- QUICK CHIPS -->
+  <nav class="quick-chips" aria-label="Popular stocks">
+    <span class="chip-label">Popular:</span>
+    <button class="chip" onclick="quickSearch('Reliance Industries')">RELIANCE</button>
+    <button class="chip" onclick="quickSearch('TCS')">TCS</button>
+    <button class="chip" onclick="quickSearch('Infosys')">INFOSYS</button>
+    <button class="chip" onclick="quickSearch('HDFC Bank')">HDFC BANK</button>
+    <button class="chip" onclick="quickSearch('Wipro')">WIPRO</button>
+    <button class="chip" onclick="quickSearch('ICICI Bank')">ICICI BANK</button>
+    <button class="chip" onclick="quickSearch('Bajaj Finance')">BAJAJ FIN</button>
+    <button class="chip" onclick="quickSearch('Adani Enterprises')">ADANI</button>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <main class="content-area" id="mainContent" role="main">
+    <div class="placeholder" id="placeholder">
+      <div class="placeholder-icon"><i class="ti ti-chart-candle" aria-hidden="true"></i></div>
+      <h1>Indian Stock &amp; Index Terminal</h1>
+      <p>Search any NSE/BSE company to get live price, market cap, P/E, EPS, revenue, net profit, and an AI-generated analyst brief.</p>
+      <div class="placeholder-cards">
+        <div class="ph-card"><i class="ti ti-live-photo"></i><span>Live prices</span></div>
+        <div class="ph-card"><i class="ti ti-calculator"></i><span>Fundamentals</span></div>
+        <div class="ph-card"><i class="ti ti-brain"></i><span>AI analysis</span></div>
+        <div class="ph-card"><i class="ti ti-chart-bar"></i><span>52W range</span></div>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <span>Data via Alpha Vantage · Analysis by Claude AI</span>
+    <span class="footer-sep">·</span>
+    <span>Not financial advice · For research only</span>
+    <span class="footer-sep">·</span>
+    <a href="https://soravjain.com" target="_blank" rel="noopener">soravjain.com</a>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

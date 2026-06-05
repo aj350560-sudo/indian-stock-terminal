@@ -1,0 +1,20 @@
+{
+  "name": "indian-stock-terminal",
+  "version": "1.0.0",
+  "description": "Live Indian stock research terminal with NSE/BSE data and AI analysis",
+  "scripts": {
+    "dev": "netlify dev",
+    "build": "echo 'Static site - no build step needed'"
+  },
+  "dependencies": {
+    "node-fetch": "^3.3.2"
+  },
+  "devDependencies": {
+    "netlify-cli": "^17.0.0"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "author": "Sorav Jain — soravjain.com",
+  "license": "MIT"
+}
